@@ -340,7 +340,7 @@ async def voice_message_handle(update: Update, context: CallbackContext):
 
     voice = update.message.voice
     voice_file = await context.bot.get_file(voice.file_id)
-    
+
     # store file in memory, not on disk
     buf = io.BytesIO()
     await voice_file.download_to_memory(buf)
@@ -657,6 +657,8 @@ def run_bot() -> None:
         .post_init(post_init)
         .build()
     )
+
+    print('bot application initialized')
 
     # add handlers
     user_filter = filters.ALL

@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "telegrambot",
+      "script": "bot/bot.py",
+      "interpreter": "/home/ec2-user/chatgpt_telegram_bot/.env/bin/python3",
+      "exec_mode": "fork_mode",
+      "instances": 1,
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "watch": true
+    }
+  ]
+}
